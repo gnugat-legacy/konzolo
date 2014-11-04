@@ -1,0 +1,21 @@
+{
+    "name": "gnugat/konzolo",
+    "license": "MIT",
+    "type": "library",
+    "description": "Lightweight Console library, for PHP",
+    "keywords": ["PHP", "Console", "lightweight"],
+    "autoload": {
+        "psr-4": {
+            "Gnugat\\Konzolo\\": "src/Gnugat/Konzolo",
+            "test\\Gnugat\\Konzolo\\": "test"
+        }
+    },
+    "authors": [
+        {
+            "name": "Loïc Chardonnet",
+            "email": "loic.chardonnet@gmail.com",
+            "homepage": "http://gnugat.github.io",
+            "role": "Developer"
+        }
+    ]
+}
