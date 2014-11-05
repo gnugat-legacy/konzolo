@@ -11,6 +11,11 @@
 
 namespace Gnugat\Konzolo;
 
+/**
+ * Retrieves information from Input and call services to process it.
+ *
+ * @api
+ */
 interface Command
 {
     const EXIT_SUCCESS = 0;
@@ -19,6 +24,8 @@ interface Command
      * @param Input $input
      *
      * @return int
+     *
+     * @api
      */
     public function execute(Input $input);
 }

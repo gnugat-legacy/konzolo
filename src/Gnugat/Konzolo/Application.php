@@ -13,6 +13,11 @@ namespace Gnugat\Konzolo;
 
 use Gnugat\Konzolo\Exception\UnknownCommandException;
 
+/**
+ * Executes the appropriate Command for the given Input.
+ *
+ * @api
+ */
 class Application
 {
     /**
@@ -23,6 +28,8 @@ class Application
     /**
      * @param string $commandName
      * @param Command $command
+     *
+     * @api
      */
     public function addCommand($commandName, Command $command)
     {
@@ -33,6 +40,10 @@ class Application
      * @param Input $input
      *
      * @return int
+     *
+     * @throws UnknownCommandException If the command is not found
+     *
+     * @api
      */
     public function run(Input $input)
     {

@@ -4,6 +4,11 @@ namespace Gnugat\Konzolo\Exception;
 
 use Gnugat\Konzolo\Input;
 
+/**
+ * When an Application cannot find a Command.
+ *
+ * @api
+ */
 class UnknownCommandException extends InvalidArgumentException
 {
     /**
@@ -19,6 +24,8 @@ class UnknownCommandException extends InvalidArgumentException
     /**
      * @param Input $input
      * @param array $commands
+     *
+     * @api
      */
     public function __construct(Input $input, array $commands)
     {
@@ -33,6 +40,8 @@ class UnknownCommandException extends InvalidArgumentException
 
     /**
      * @return Input
+     *
+     * @api
      */
     public function getInput()
     {
@@ -41,6 +50,8 @@ class UnknownCommandException extends InvalidArgumentException
 
     /**
      * @return array
+     *
+     * @api
      */
     public function getCommands()
     {

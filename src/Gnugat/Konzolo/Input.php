@@ -11,6 +11,11 @@
 
 namespace Gnugat\Konzolo;
 
+/**
+ * Holds information which needs to be processed.
+ *
+ * @api
+ */
 class Input
 {
     /**
@@ -25,6 +30,8 @@ class Input
 
     /**
      * @param string $commandName
+     *
+     * @api
      */
     public function __construct($commandName)
     {
@@ -33,6 +40,8 @@ class Input
 
     /**
      * @return string
+     *
+     * @api
      */
     public function getCommandName()
     {
@@ -42,6 +51,8 @@ class Input
     /**
      * @param string $name
      * @param string $value
+     *
+     * @api
      */
     public function setArgument($name, $value)
     {
@@ -52,6 +63,8 @@ class Input
      * @param string $name
      *
      * @return string
+     *
+     * @api
      */
     public function getArgument($name)
     {

@@ -53,3 +53,17 @@ $exitCode = $app->run($input)
 
 exit($exitCode);
 ```
+
+## Further documentation
+
+You can see the current and past versions using one of the following:
+
+* the `git tag` command
+* the [releases page on Github](https://github.com/gnugat/redaktilo/releases)
+* the file listing the [changes between versions](CHANGELOG.md)
+
+You can find more documentation at the following links:
+
+* [copyright and MIT license](LICENSE)
+* [versioning and branching models](VERSIONING.md)
+* [contribution instructions](CONTRIBUTING.md)
