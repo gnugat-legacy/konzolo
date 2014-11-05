@@ -11,6 +11,8 @@
 
 namespace Gnugat\Konzolo;
 
+use Gnugat\Konzolo\Exception\UnknownCommandException;
+
 class Application
 {
     /**
@@ -35,6 +37,9 @@ class Application
     public function run(Input $input)
     {
         $commandName = $input->getCommandName();
+        if (!isset($this->commands[$commandName])) {
+            throw new UnknownCommandException($input, $this->commands);
+        }
         $command = $this->commands[$commandName];
 
         return $command->execute($input);

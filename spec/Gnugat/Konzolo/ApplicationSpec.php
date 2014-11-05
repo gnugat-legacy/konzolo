@@ -28,4 +28,12 @@ class ApplicationSpec extends ObjectBehavior
         $this->addCommand(self::COMMAND_NAME, $command);
         $this->run($input)->shouldBe(Command::EXIT_SUCCESS);
     }
+
+    function it_cannot_execute_unknown_commands()
+    {
+        $input = new Input(self::COMMAND_NAME);
+        $unknownCommandException = 'Gnugat\Konzolo\Exception\UnknownCommandException';
+
+        $this->shouldThrow($unknownCommandException)->duringRun($input);
+    }
 }
