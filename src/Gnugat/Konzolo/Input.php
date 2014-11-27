@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Redaktilo project.
+ * This file is part of the Konzolo project.
  *
  * (c) Loïc Chardonnet <loic.chardonnet@gmail.com>
  *
