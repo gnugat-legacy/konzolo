@@ -67,6 +67,8 @@ You can see the current and past versions using one of the following:
 
 You can find more documentation at the following links:
 
+* [doc/exceptions.md](Exception reference)
+
 * [copyright and MIT license](LICENSE)
 * [versioning and branching models](VERSIONING.md)
 * [contribution instructions](CONTRIBUTING.md)
