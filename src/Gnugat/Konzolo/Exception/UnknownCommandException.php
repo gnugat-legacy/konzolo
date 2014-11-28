@@ -41,10 +41,7 @@ class UnknownCommandException extends InvalidArgumentException
         $this->input = $input;
         $this->commands = $commands;
 
-        parent::__construct(sprintf(
-            'Unknown command: "%s"',
-            $input->getCommandName()
-        ));
+        parent::__construct(sprintf('Unknown command: "%s"', $input->getCommandName()));
     }
 
     /**

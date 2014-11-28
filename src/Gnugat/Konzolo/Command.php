@@ -25,6 +25,8 @@ interface Command
      *
      * @return int
      *
+     * @throws Exception\UndefinedArgumentException If the argument is undefined
+     *
      * @api
      */
     public function execute(Input $input);
