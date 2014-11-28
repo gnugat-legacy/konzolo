@@ -46,6 +46,7 @@ require __DIR__.'/vendor/autoload.php';
 
 use Acme\Demo\Command\HelloWorldCommand;
 use Gnugat\Konzolo\Application;
+use Gnugat\Konzolo\Input;
 
 $input = new Input('hello:world');
 $input->setArgument('name', $argv[1]);
