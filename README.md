@@ -2,6 +2,9 @@
 
 A lightweight Console library, for PHP.
 
+> **Note**: Can be used to create CLI applications, but its main usage is as the
+> Command design pattern.
+
 ## Installation
 
 Use [Composer](http://getcomposer.org) to install Konzolo:
