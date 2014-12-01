@@ -6,8 +6,7 @@
     "keywords": ["PHP", "Console", "lightweight"],
     "autoload": {
         "psr-4": {
-            "Gnugat\\Konzolo\\": "src/Gnugat/Konzolo",
-            "test\\Gnugat\\Konzolo\\": "test"
+            "Gnugat\\Konzolo\\": "src/Gnugat/Konzolo"
         }
     },
     "authors": [
