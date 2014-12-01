@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.1.0: Input validation
+
+* added InputValidator
+* added InputConstraint
+* added InvalidInputException
+* added Input#hasArgument
+
 ## 1.0.1
 
 * added usage note in the README
