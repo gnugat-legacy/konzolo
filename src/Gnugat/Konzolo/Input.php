@@ -11,6 +11,8 @@
 
 namespace Gnugat\Konzolo;
 
+use Gnugat\Konzolo\Exception\UndefinedArgumentException;
+
 /**
  * Holds information which needs to be processed.
  *
@@ -64,10 +66,26 @@ class Input
      *
      * @return string
      *
+     * @throws UndefinedArgumentException If the argument is undefined
+     *
      * @api
      */
     public function getArgument($name)
     {
+        if (!isset($this->arguments[$name])) {
+            throw new UndefinedArgumentException($name, $this->arguments);
+        }
+
         return $this->arguments[$name];
+    }
+
+    /**
+     * @param string $name
+     *
+     * @return bool
+     */
+    public function hasArgument($name)
+    {
+        return isset($this->arguments[$name]);
     }
 }

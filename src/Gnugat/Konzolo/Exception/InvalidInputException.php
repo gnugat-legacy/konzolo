@@ -14,11 +14,11 @@ namespace Gnugat\Konzolo\Exception;
 use Gnugat\Konzolo\Input;
 
 /**
- * When an Application cannot find a Command.
+ * When an Input isn't valid.
  *
  * @api
  */
-class UnknownCommandException extends InvalidArgumentException
+class InvalidInputException extends InvalidArgumentException
 {
     /**
      * @var Input
@@ -26,22 +26,16 @@ class UnknownCommandException extends InvalidArgumentException
     private $input;
 
     /**
-     * @var array
-     */
-    private $commands;
-
-    /**
-     * @param Input $input
-     * @param array $commands
+     * @param Input  $input
+     * @param string $message
      *
      * @api
      */
-    public function __construct(Input $input, array $commands)
+    public function __construct(Input $input, $message)
     {
         $this->input = $input;
-        $this->commands = $commands;
 
-        parent::__construct(sprintf('Unknown command: "%s"', $input->getCommandName()));
+        parent::__construct($message);
     }
 
     /**
@@ -52,15 +46,5 @@ class UnknownCommandException extends InvalidArgumentException
     public function getInput()
     {
         return $this->input;
-    }
-
-    /**
-     * @return array
-     *
-     * @api
-     */
-    public function getCommands()
-    {
-        return $this->commands;
     }
 }

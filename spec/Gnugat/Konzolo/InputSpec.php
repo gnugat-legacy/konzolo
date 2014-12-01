@@ -34,4 +34,18 @@ class InputSpec extends ObjectBehavior
         $this->setArgument(self::ARGUMENT_NAME, self::ARGUMENT_VALUE);
         $this->getArgument(self::ARGUMENT_NAME)->shouldBe(self::ARGUMENT_VALUE);
     }
+
+    function it_cannot_get_undefined_arguments()
+    {
+        $undefinedArgumentException = 'Gnugat\Konzolo\Exception\UndefinedArgumentException';
+        $this->shouldThrow($undefinedArgumentException)->duringGetArgument(self::ARGUMENT_NAME);
+    }
+
+    function it_checks_presence_of_argument()
+    {
+        $this->hasArgument(self::ARGUMENT_NAME)->shouldBe(false);
+
+        $this->setArgument(self::ARGUMENT_NAME, self::ARGUMENT_VALUE);
+        $this->hasArgument(self::ARGUMENT_NAME)->shouldBe(true);
+    }
 }

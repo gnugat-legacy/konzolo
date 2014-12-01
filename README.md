@@ -46,6 +46,7 @@ require __DIR__.'/vendor/autoload.php';
 
 use Acme\Demo\Command\HelloWorldCommand;
 use Gnugat\Konzolo\Application;
+use Gnugat\Konzolo\Input;
 
 $input = new Input('hello:world');
 $input->setArgument('name', $argv[1]);
@@ -66,6 +67,9 @@ You can see the current and past versions using one of the following:
 * the file listing the [changes between versions](CHANGELOG.md)
 
 You can find more documentation at the following links:
+
+* [doc/exceptions.md](Exception reference)
+* [doc/input_validation.md](Input validation)
 
 * [copyright and MIT license](LICENSE)
 * [versioning and branching models](VERSIONING.md)

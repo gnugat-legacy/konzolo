@@ -41,7 +41,8 @@ class Application
      *
      * @return int
      *
-     * @throws UnknownCommandException If the command is not found
+     * @throws UnknownCommandException              If the command is not found
+     * @throws Exception\UndefinedArgumentException If the argument is undefined
      *
      * @api
      */

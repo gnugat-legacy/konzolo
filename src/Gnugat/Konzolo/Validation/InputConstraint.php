@@ -9,25 +9,23 @@
  * file that was distributed with this source code.
  */
 
-namespace Gnugat\Konzolo;
+namespace Gnugat\Konzolo\Validation;
+
+use Gnugat\Konzolo\Input;
 
 /**
- * Retrieves information from Input and call services to process it.
+ * Checks the Input against a custom rule.
  *
  * @api
  */
-interface Command
+interface InputConstraint
 {
-    const EXIT_SUCCESS = 0;
-
     /**
      * @param Input $input
      *
-     * @return int
-     *
-     * @throws Exception\UndefinedArgumentException If the argument is undefined
+     * @throws \Gnugat\Konzolo\Exception\InvalidInputException If the Input isn't valid
      *
      * @api
      */
-    public function execute(Input $input);
+    public function throwIfInvalid(Input $input);
 }
