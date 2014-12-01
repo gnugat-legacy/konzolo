@@ -31,12 +31,36 @@ try {
 
 Here's the list of exceptions that can be thrown:
 
+* [InvalidInputException](#invalidinputexception)
 * [UndefinedArgumentException](#undefinedargumentexception)
 * [UnknownCommandException](#unknowncommandexception)
 
 Here's the list of exception types:
 
 * [InvalidArgumentException](#invalidargumentexception)
+
+## InvalidInputException
+
+Thrown when an input isn't valid:
+
+```php
+<?php
+
+namespace Gnugat\Konzolo\Exception;
+
+class InvalidInputException extends InvalidArgumentException
+{
+    public function getInput();
+    public function getMessage();
+}
+```
+
+The exception *leaks* through the following methods:
+
+* `InputConstraint#throwIfInvalid()`
+* `InputValidator#throwIfInvalid()`
+* `Command#execute()`
+* `Application#run()`
 
 ## UndefinedArgumentException
 
