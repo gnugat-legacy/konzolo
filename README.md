@@ -2,14 +2,14 @@
 
 A lightweight Console library, for PHP.
 
-> **Note**: Can be used to create CLI applications, but its main usage is as the
-> Command design pattern.
+It can be used to build minimalistic CLI applications, or to implement the
+Command design pattern.
 
 ## Installation
 
 Use [Composer](http://getcomposer.org) to install Konzolo:
 
-    composer require gnugat/konzolo:~1.0.0
+    composer require gnugat/konzolo:~1.1
 
 ## Example
 
@@ -25,12 +25,10 @@ use Gnugat\Konzolo\Input;
 
 class HelloWorldCommand implements Command
 {
-    /**
-     * {@inheritDoc}
-     */
     public function execute(Input $input)
     {
         $name = $input->getArgument('name');
+        echo "Hello $name\n";
 
         return Command::EXIT_SUCCESS;
     }
@@ -63,7 +61,7 @@ exit($exitCode);
 You can see the current and past versions using one of the following:
 
 * the `git tag` command
-* the [releases page on Github](https://github.com/gnugat/redaktilo/releases)
+* the [releases page on Github](https://github.com/gnugat/konzolo/releases)
 * the file listing the [changes between versions](CHANGELOG.md)
 
 You can find more documentation at the following links:

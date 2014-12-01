@@ -3,7 +3,7 @@
 Everybody should be able to help. Here's how you can make this project more
 awesome:
 
-1. [Fork it](https://github.com/gnugat/redaktilo/fork_select)
+1. [Fork it](https://github.com/gnugat/konzolo/fork_select)
 2. improve it
 3. submit a [pull request](https://help.github.com/articles/creating-a-pull-request)
 
